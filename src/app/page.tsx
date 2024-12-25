@@ -2,6 +2,7 @@ import "@uploadthing/react/styles.css";
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 import { db } from "~/server/db";
 import { getMyImages } from "~/server/queries";
+import Image from "next/image";
 
 export const dynamic = "force-dynamic";
 
@@ -12,8 +13,18 @@ export default async function HomePage() {
     return (
       <div className="flex flex-wrap gap-4">
         {images.map((image) => (
-          <div className="flex flex-col text-white" key={image.id}>
-            <img className="w-48" src={image.url} />
+          <div
+            className="flex h-48 w-48 flex-col justify-center overflow-hidden text-white"
+            key={image.id}
+          >
+            <Image
+              src={image.url}
+              style={{ objectFit: "cover" }}
+              width={192}
+              objectFit="cover"
+              height={192}
+              alt={image.name}
+            ></Image>
             {image.name}
           </div>
         ))}
