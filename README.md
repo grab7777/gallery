@@ -1,7 +1,7 @@
 # Create T3 App
 ## TODO
 
-- [ ] deploy
+- [x] deploy
 - [ ] basic UI
 - [ ] set up db
 - [ ] attach db to UI
