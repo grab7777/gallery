@@ -1,6 +1,5 @@
 import "@uploadthing/react/styles.css";
 import { SignedIn, SignedOut } from "@clerk/nextjs";
-import { db } from "~/server/db";
 import { getMyImages } from "~/server/queries";
 import Image from "next/image";
 
@@ -24,7 +23,7 @@ export default async function HomePage() {
               alt={image.name}
               style={{ overflow: "hidden", objectFit: "cover" }}
             />
-            <div className="">{image.name}</div>
+            <div>{image.name}</div>
           </div>
         ))}
       </div>
