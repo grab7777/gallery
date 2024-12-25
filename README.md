@@ -2,9 +2,9 @@
 ## TODO
 
 - [x] deploy
-- [ ] basic UI
-- [ ] set up db
-- [ ] attach db to UI
+- [x] basic UI
+- [x] set up db
+- [x] attach db to UI
 - [ ] add authentication
 - [ ] add image upload
 - [ ] error management
