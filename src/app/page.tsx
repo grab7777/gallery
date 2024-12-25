@@ -1,6 +1,5 @@
-import { SignedIn, SignedOut, SignIn } from "@clerk/nextjs";
-import exp from "constants";
-import Link from "next/link";
+import "@uploadthing/react/styles.css";
+import { SignedIn, SignedOut } from "@clerk/nextjs";
 import { db } from "~/server/db";
 
 export const dynamic = "force-dynamic";
@@ -13,8 +12,8 @@ export default async function HomePage() {
 
     return (
       <div className="flex flex-wrap gap-4">
-        {[...images, ...images].map((image, index) => (
-          <div className="flex flex-col text-white" key={`${image.id}${index}`}>
+        {images.map((image) => (
+          <div className="flex flex-col text-white" key={image.id}>
             <img className="w-48" src={image.url} />
             {image.name}
           </div>
