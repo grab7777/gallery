@@ -11,21 +11,20 @@ export default async function HomePage() {
     const images = await getMyImages();
 
     return (
-      <div className="flex flex-wrap gap-4">
+      <div className="flex w-full flex-wrap gap-4">
         {images.map((image) => (
           <div
-            className="flex h-48 w-48 flex-col justify-center overflow-hidden text-white"
+            className="flex h-56 w-48 flex-col justify-center gap-2 overflow-hidden text-white"
             key={image.id}
           >
             <Image
               src={image.url}
-              style={{ objectFit: "cover" }}
               width={192}
-              objectFit="cover"
               height={192}
               alt={image.name}
-            ></Image>
-            {image.name}
+              style={{ overflow: "hidden", objectFit: "cover" }}
+            />
+            <div className="">{image.name}</div>
           </div>
         ))}
       </div>
