@@ -1,11 +1,12 @@
-# Create T3 App
+# Gallery
+
 ## TODO
 
 - [x] deploy
 - [x] basic UI
 - [x] set up db
 - [x] attach db to UI
-- [ ] add authentication
+- [x] add authentication
 - [ ] add image upload
 - [ ] error management
 - [ ] routing / image page
