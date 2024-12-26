@@ -11,8 +11,8 @@ export default async function HomePage() {
     const images = await getMyImages();
 
     return (
-      <div className="flex w-full flex-wrap gap-4">
-        {images.map((image) => (
+      <div className="flex w-full flex-wrap justify-center gap-4 p-4">
+        {[...images, ...images, ...images, ...images].map((image) => (
           <div
             className="flex h-56 w-48 flex-col justify-center gap-2 overflow-hidden text-white"
             key={image.id}

@@ -3,7 +3,7 @@
 import { type ElementRef, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { createPortal } from "react-dom";
-import { CrossIcon } from "public/cross";
+import { CrossIcon } from "public/icons/cross";
 import { Button } from "~/app/_components/button";
 
 export function Modal({ children }: { children: React.ReactNode }) {
@@ -26,14 +26,14 @@ export function Modal({ children }: { children: React.ReactNode }) {
       className="m-0 flex h-screen w-screen flex-row-reverse bg-black/60 backdrop-blur"
       onClose={onDismiss}
     >
-      {/* <Button
+      <Button
         size="icon"
-        className="z-20 m-6 border border-slate-700 shrink-0"
+        className="absolute z-20 m-6 shrink-0 border border-slate-700"
         onClick={onDismiss}
         variant={"secondary"}
       >
         <CrossIcon />
-      </Button> */}
+      </Button>
       {children}
     </dialog>,
     document.getElementById("modal-root")!,
