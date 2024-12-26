@@ -25,7 +25,7 @@ const InfoRow = ({ label, value }: { label: string; value: string | null }) => {
 export const ImageInfo = ({ image, uploaderInfo }: ImageInfoProps) => {
   return (
     <div className="flex flex-col text-xs">
-      <InfoRow label="Created" value={image.createdAt.toISOString()} />
+      <InfoRow label="Created" value={new Date(image.createdAt).toLocaleString()} />
       <InfoRow
         label="Uploaded by"
         value={uploaderInfo.fullName ?? uploaderInfo.userName}
