@@ -23,17 +23,17 @@ export function Modal({ children }: { children: React.ReactNode }) {
   return createPortal(
     <dialog
       ref={dialogRef}
-      className="m-0 flex h-screen w-screen flex-row-reverse bg-black/80"
+      className="m-0 flex h-screen w-screen flex-row-reverse bg-black/60 backdrop-blur"
       onClose={onDismiss}
     >
-      <Button
+      {/* <Button
         size="icon"
         className="z-20 m-6 border border-slate-700 shrink-0"
         onClick={onDismiss}
         variant={"secondary"}
       >
         <CrossIcon />
-      </Button>
+      </Button> */}
       {children}
     </dialog>,
     document.getElementById("modal-root")!,
